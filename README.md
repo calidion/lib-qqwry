@@ -19,8 +19,8 @@ nodeIp2Location('Rainbow');
 Apache-2.0 © [calidion]()
 
 
-[npm-image]: https://badge.fury.io/js/lib-qqwry.svg
-[npm-url]: https://npmjs.org/package/lib-qqwry
+[npm-image]: https://badge.fury.io/js/lib-qqwry2.svg
+[npm-url]: https://npmjs.org/package/lib-qqwry2
 [travis-image]: https://travis-ci.org/calidion/lib-qqwry.svg?branch=master
 [travis-url]: https://travis-ci.org/calidion/lib-qqwry
 [daviddm-image]: https://david-dm.org/calidion/lib-qqwry.svg?theme=shields.io
