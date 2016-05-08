@@ -24,7 +24,7 @@ for(var i =0; i<10; i++){
 if(arg == "-1"){
 	console.log('--- 效率测试 IP查询(searchIP) ---')
 	var tb,te,nn;
-	
+
 	tb = new Date();
 	nn = v1(1000,qqwry1);
 	te = new Date();
@@ -62,20 +62,20 @@ if(arg == "-1"){
 		te = new Date();
 		n = iparr.length;
 		console.log("IP段异步查询(共获取"+(n/10000)+"万条记录):"+ (te-tb) + "ms 平均:" + (te-tb)/n);
-		
+
 		openspeed();
-		
+
 		tb = new Date();
 		qqwry1.searchIPScope("0.0.0.0","255.255.255.255",function(err,iparr){
 			te = new Date();
 			n = iparr.length;
-			console.log("IP段异步查询(共获取"+(n/10000)+"万条记录):"+ (te-tb) + "ms 平均:" + (te-tb)/n);	
+			console.log("IP段异步查询(共获取"+(n/10000)+"万条记录):"+ (te-tb) + "ms 平均:" + (te-tb)/n);
 		});
 	});
 
 }else{//验证是否正常
 	var loc = qqwry1.searchIP(arg || "255.255.255.255");
-	console.log(loc);	
+	console.log(loc);
 	return;
 }
 
@@ -109,6 +109,3 @@ function v2(n,qqwry){
 	}
 	return [k*ipdsl,nb];
 }
-
-
-
