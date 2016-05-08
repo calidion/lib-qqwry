@@ -30,13 +30,8 @@ describe('QQWry', function() {
 
   it('should throw if ip is invalid', function() {
     var func = require('../lib/func');
-    var catched = false;
-    try {
-      func.ipToInt('123.122');
-    } catch (e) {
-      catched = true;
-    }
-    assert(catched);
+    var catched = func.ipToInt('123.122');
+    assert(catched === -1);
   });
 
   it('should search single ip', function() {
