@@ -5,6 +5,40 @@ var Qqwry = require('../lib/index.js');
 qqwry = Qqwry.init();
 
 describe('QQWry', function() {
+
+  it('should throw if ip is negative', function() {
+    var func = require('../lib/func');
+    var catched = false;
+    try {
+      func.intToIP(-1);
+    } catch (e) {
+      catched = true;
+    }
+    assert(catched);
+  });
+
+  it('should throw if ip is negative', function() {
+    var func = require('../lib/func');
+    var catched = false;
+    try {
+      func.intToIP(0xFFFFFFFF + 1);
+    } catch (e) {
+      catched = true;
+    }
+    assert(catched);
+  });
+
+  it('should throw if ip is invalid', function() {
+    var func = require('../lib/func');
+    var catched = false;
+    try {
+      func.ipToInt('123.122');
+    } catch (e) {
+      catched = true;
+    }
+    assert(catched);
+  });
+
   it('should search single ip', function() {
     var ip = qqwry.searchIP("113.45.183.91");
     assert.deepEqual(ip, {
