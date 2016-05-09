@@ -10,9 +10,21 @@ $ npm install --save lib-qqwry2
 ## Usage
 
 ```js
-var nodeIp2Location = require('lib-qqwry2');
+var Qqwry = require('lib-qqwry2');
+qqwry = Qqwry.init();
 
-nodeIp2Location('Rainbow');
+var ip = qqwry.searchIP("113.45.183.91");
+
+>ip
+
+// 结果
+{
+  int: 1898821467,
+  ip: '113.45.183.91',
+  Country: '北京市',
+  Area: '电信通'
+}
+
 ```
 ## License
 
